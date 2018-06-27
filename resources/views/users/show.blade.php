@@ -21,9 +21,8 @@
                 @endforeach
             </tbody>
         </table>
+        <p>{!! link_to_route('users.result', 'せきがえ！') !!}</p>
     @endif  
     </aside>
-    
-    
 
 @endsection
