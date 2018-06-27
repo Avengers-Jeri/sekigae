@@ -5,12 +5,14 @@
         <?php $user = Auth::user(); ?>
         {{ $user->team_name }}
     @else
-    <div class="center jumbotron">
-        <div class="text-center">
+<div class="cover">
+        <div class="cover-inner">
+            <div class="cover-contents">
             <h1>せきがえしよ</h1>
         </div>
     </div>
-    
+</div>
+ 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
