@@ -17,7 +17,7 @@ class UsersController extends Controller
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $members = $user->members()->orderBy('id');
+            $members = $user->members()->get();
 
             $data = [
                 'user' => $user,
