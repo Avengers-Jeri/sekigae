@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 use App\User;
 
@@ -17,7 +17,7 @@ class UsersController extends Controller
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $members = $user->members()->orderBy('created_at', 'desc');
+            $members = $user->members()->get();
 
             $data = [
                 'user' => $user,
@@ -29,8 +29,5 @@ class UsersController extends Controller
             return view('welcome');
         }
     }
-
-    
-    
 }
- 
+
