@@ -24,6 +24,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
-     Route::resource('members', 'MembersController');
-
+    Route::resource('members', 'MembersController');
+    Route::get('results', 'UsersController@result')->name('users.result');
 });

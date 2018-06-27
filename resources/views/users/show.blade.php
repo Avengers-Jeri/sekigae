@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
-                @if (count($members) > 0)
-                @include('members.members', ['members' => $members])
-                @endif
-=======
         <aside class="col-xs-4">
                     <h1>{{ $user->team_name }}</h1>
      @if (count($members) > 0)
@@ -23,9 +18,7 @@
                 @endforeach
             </tbody>
         </table>
+        <p>{!! link_to_route('users.result', 'せきがえ！') !!}</p>
     @endif  
     </aside>
-    
-    
->>>>>>> 7c946cb9c61c2503ef345893b5b21bcc57e303d4
 @endsection
