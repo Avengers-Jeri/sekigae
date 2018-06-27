@@ -1,16 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
         <aside class="col-xs-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{ $user->team_name }}</h3>
-                </div>
-                @if (count($members) > 0)
-                @include('members.members', ['members' => $members])
-                @endif
-            </div>
-        </aside>
-    </div>
+                    <h1>{{ $user->team_name }}</h1>
+     @if (count($members) > 0)
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>team members</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($members as $member)
+                 <tr>
+                     <td>{{ $member->member_name }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif  
+    </aside>
+    
+    
 @endsection
