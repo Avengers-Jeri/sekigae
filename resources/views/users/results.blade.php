@@ -14,5 +14,5 @@
         </div>
         @endforeach
     @endif  
-
+    <p>{!! link_to_route('users.result', 'もう一回！') !!}</p>
 @endsection

@@ -14,6 +14,13 @@
                 @foreach ($members as $member)
                  <tr>
                      <td>{{ $member->member_name }}</td>
+                     <td>
+                     <div class='btn-group'>
+                        {!! Form::open(['route' => ['members.destroy', $member->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
+                    </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
