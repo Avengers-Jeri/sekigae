@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">席替え.com</a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/logo.png") }}" alt="Sekigae"></a>
                 
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
