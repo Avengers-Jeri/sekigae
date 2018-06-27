@@ -17,7 +17,7 @@ class UsersController extends Controller
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $members = $user->members()->get();
+            $members = $user->members()->get()->shuffle();
 
             $data = [
                 'user' => $user,
@@ -30,4 +30,3 @@ class UsersController extends Controller
         }
     }
 }
-
