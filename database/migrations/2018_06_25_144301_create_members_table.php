@@ -16,10 +16,10 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
             $table->string('member_name');
-            $table->integer('team_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index();
             $table->timestamps();
             
-            $table->foreign('team_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
