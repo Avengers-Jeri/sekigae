@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-        <aside class="col-xs-4">
-                    <h1>{{ $user->team_name }}</h1>
+    <aside class="col-xs-offset-4 col-xs-4" >
+    <h1>{{ $user->team_name }}</h1>
      @if (count($members) > 0)
         <table class="table table-striped">
             <thead>
@@ -25,7 +25,7 @@
                 @endforeach
             </tbody>
         </table>
-        <p>{!! link_to_route('users.result', 'せきがえ！') !!}</p>
+        <a href="{{ route('users.result') }}" class="btn btn-success btn-lg">せきがえ</a>
     @endif  
     </aside>
 @endsection
