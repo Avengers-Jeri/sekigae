@@ -11,23 +11,27 @@ use App\User;
 class UsersController extends Controller
 {
 
- public function show()
- 
-    {
-        $data = [];
-        if (\Auth::check()) {
-            $user = \Auth::user();
-            $members = $user->members()->orderBy('id');
-
-            $data = [
-                'user' => $user,
-                'members' => $members,
-            ];
-            
-            return view('users.show', $data);
-        }else {
-            return view('welcome');
+     public function show()
+     
+        {
+            $data = [];
+            if (\Auth::check()) {
+                $user = \Auth::user();
+                $members = $user->members()->get();
+                $shufle_members = shuffle($members);
+                $data = [
+                    'user' => $user,
+                    'members' => $shufle_members,
+                ];
+                
+                return view('users.show', $data);
+            }else {
+                return view('welcome');
+            }
         }
-    }
+    // public function shuffle()
+    // {
+    //     //
+    // }
 }
 

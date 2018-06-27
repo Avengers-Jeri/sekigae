@@ -33,7 +33,7 @@ class MembersController extends Controller
             'member_name' => $request->member_name,
         ]);
 
-        return redirect()->back();
+        return redirect('/');
     }
     
     public function destroy($id)
