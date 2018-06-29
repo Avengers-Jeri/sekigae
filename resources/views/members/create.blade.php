@@ -8,8 +8,8 @@
             
                   {!! Form::open(['route' => 'members.store']) !!}
                       <div class="form-group">
-                          {!! Form::textarea('member_name', old('member_name'), ['class' => 'form-control', 'rows' => '2']) !!}
-                          {{ Form::submit('Welcome to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
+                          {!! Form::text('member_name', old('member_name'), ['class' => 'form-control','placeholder'=>"name"]) !!}
+                          {{ Form::submit('Belong to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
                       </div>
                   {!! Form::close() !!}
             

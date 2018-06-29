@@ -2,10 +2,14 @@
 
 @section('content')
         <aside class="col-xs-offset-4 col-xs-4">
-
-        
-
-                    <h1>{{ $user->team_name }}</h1>
+    <h1>{{ $user->team_name }}</h1>
+    {!! Form::open(['route' => 'members.store']) !!}
+                      <div class="form-group">
+                          {!! Form::text('member_name', old('member_name'), ['class' => 'form-control','placeholder'=>"name"]) !!}
+                          {{ Form::submit('Belong to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
+                      </div>
+                  {!! Form::close() !!}
+    
      @if (count($members) > 0)
         <table class="table table-striped">
             <thead>
