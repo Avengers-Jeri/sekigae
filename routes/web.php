@@ -23,7 +23,8 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('users', 'UsersController', ['only' => ['show']]);
+    Route::resource('users', 'UsersController');
     Route::resource('members', 'MembersController');
     Route::get('results', 'UsersController@result')->name('users.result');
+    Route::get('taikai', 'UsersController@taikai')->name('users.taikai');
 });

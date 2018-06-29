@@ -47,6 +47,14 @@ class UsersController extends Controller
         }
     }
     
+    
+    public function taikai()
+    {
+       
+        return view('users.taikai');
+    }
+    
+    
      public function destroy($id)
     {
         $user = User::find($id);    

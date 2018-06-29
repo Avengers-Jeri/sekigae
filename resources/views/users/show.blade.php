@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-        <aside class="col-xs-4">
+        <aside class="col-xs-offset-4 col-xs-4">
 
         
 
@@ -30,6 +30,11 @@
         </table>
         <a href="{{ route('users.result') }}" class="btn btn-success btn-lg">せきがえ</a>
     @endif  
+    
+    
+     <p class='text-right'>{!! link_to_route('users.taikai', '退会したい？') !!}</p>
     </aside>
+
+
 
 @endsection
