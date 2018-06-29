@@ -5,14 +5,16 @@
                     <h1>{{ $user->team_name }}</h1>
      @if (count($members) > 0)
        @foreach ($members as $member)
-        <div  class="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
+        <div  class="col-xs-6" >
         <div class="panel panel-default">
             <div class="panel-body">
-        <p>{{ $member->member_name }}</p>
+            <div class="text-center">   
+        <h1>{{ $member->member_name }}</h1>
+            </div>
             </div>
         </div>
         </div>
         @endforeach
     @endif  
-    <p>{!! link_to_route('users.result', 'もう一回！') !!}</p>
-@endsection
+ <a href="{{ route('users.result') }}" class="btn btn-success btn-lg">もう一回！</a>
+ @endsection

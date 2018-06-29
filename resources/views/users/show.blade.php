@@ -28,7 +28,7 @@
                 @endforeach
             </tbody>
         </table>
-        <p>{!! link_to_route('users.result', 'せきがえ！') !!}</p>
+        <a href="{{ route('users.result') }}" class="btn btn-success btn-lg">せきがえ</a>
     @endif  
     </aside>
 
