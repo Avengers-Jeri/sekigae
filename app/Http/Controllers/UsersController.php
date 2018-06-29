@@ -50,8 +50,9 @@ class UsersController extends Controller
     
     public function taikai()
     {
+       $user = \Auth::user();
        
-        return view('users.taikai');
+        return view('users.taikai',['user'=> $user]);
     }
     
     
