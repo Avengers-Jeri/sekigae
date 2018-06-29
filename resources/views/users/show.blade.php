@@ -6,7 +6,7 @@
     {!! Form::open(['route' => 'members.store']) !!}
                       <div class="form-group">
                           {!! Form::text('member_name', old('member_name'), ['class' => 'form-control','placeholder'=>"name"]) !!}
-                          {{ Form::submit('Belong to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
+                          {{ Form::submit('Add to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
                       </div>
                   {!! Form::close() !!}
     
