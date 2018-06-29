@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+    <aside class="col-lg-offset-4 col-lg-4">
     <div class="row">
-        <aside class="col-xs-offset-4 col-xs-4">
-            
-            
             
                   {!! Form::open(['route' => 'members.store']) !!}
                       <div class="form-group">
@@ -12,9 +10,6 @@
                           {{ Form::submit('Add to '.Auth::user()->team_name  , ['class' => 'btn btn-primary btn-block']) }}
                       </div>
                   {!! Form::close() !!}
-            
-        </aside>
-        
-        
     </div>
+    </aside> 
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-        <aside class="col-xs-offset-4 col-xs-4">
+<aside class="col-lg-offset-4 col-lg-4">
     <h1>{{ $user->team_name }}</h1>
     {!! Form::open(['route' => 'members.store']) !!}
                       <div class="form-group">
@@ -37,8 +37,6 @@
     
     
      <p class='text-right'>{!! link_to_route('users.taikai', '退会したい？') !!}</p>
-    </aside>
 
-
-
+</aside> 
 @endsection

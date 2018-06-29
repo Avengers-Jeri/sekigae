@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<aside class="col-xs-offset-2 col-xs-8">
+<aside class="col-lg-offset-4 col-lg-4">
     <h1 class="text-center">{{ $user->team_name }}</h1>
      @if (count($members) > 0)
        @foreach ($members as $member)
@@ -19,5 +19,5 @@
     <div class="text-center">
     <a href="{{ route('users.result') }}" class="btn btn-success btn-lg">もう一回！</a>
     </div>
- </aside>
+    </aside> 
  @endsection
